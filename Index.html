@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+  <title>Wine Company - Domů</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #1e1e1e;
+      color: white;
+      font-family: 'Italiana',serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;/* overflow-y: hidden;  // odkomentuj, pokud chceš zakázat i vertikální scroll */
+    }
+
+    header {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 2;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.85rem;
+    }
+
+    nav span {
+      margin-right: 0.5rem;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content img {
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 0.8rem;
+      color: #ccc;
+      margin-top: 0.5rem;
+    }
+
+    .section {
+      background-color: #2b2b2b;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      align-items: center;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .info img {
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .info h3 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    .info p {
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+
+    .cta {
+      margin-top: 2rem;
+    }
+
+    .cta h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .cta p {
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+
+    .cta-buttons {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+    .btn-shop {
+      background-color: #e60000;
+      color: white;
+    }
+
+    .btn-location {
+      background-color: gold;
+      color: black;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    a{
+      text-decoration: none;
+      color: white;
+    }
+
+.cart {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="Index.html"><img src="./img/malyLogo.png" alt="Logo" style="height: 20px;" />
+      <span>Wine Company</span></a>
+    </div>
+    <nav>
+      <div class="cart">
+        <a href="formular.html"> 🛒 <span>0</span></a>
+      </div>
+      <a href="sluzby.html">Služby</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <video autoplay muted loop>
+      <source src="./img/wine-bg.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <img src="./img/velkyLogo.png" alt="Wine Company Logo" />
+      <h1>Wine Company</h1>
+      <p>For the wine lovers.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Luxury Wine with Czech Tradition</h2>
+    <div class="info-grid">
+      <div class="info">
+        <img src="./img/Rectangle 2.png" alt="Classic Procedure" />
+        <h3>Classic Procedure</h3>
+        <p>Carefully grown and stored in traditional cellars.</p>
+      </div>
+
+      <div class="info">
+        <img src="./img/obrázek2.png" alt="Made With Love" />
+        <h3>Made With Love</h3>
+        <p>Made by the best winemakers who fill our wine with love and knowledge.</p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <h3>Want a drink?</h3>
+      <p>You can order wine right now in our online store or come to visit us in Czech Republic.</p>
+      <div class="cta-buttons">
+        <button class="btn btn-shop">Shop</button>
+        <button class="btn btn-location">Location</button>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
