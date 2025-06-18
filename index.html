@@ -11,19 +11,23 @@
 
 <body class="f-normal">
   <header class="home" id="homenav">
-    <div>
-      <a aria-current="page" class="logo f-title-4"><img src="/assets/img/logo.png" alt="Logo"/>
-      <span>Wine Company</span></a>
+    <div class="title">
+      <a aria-current="page" class="logo f-title-4">
+        <img src="/assets/img/logo.png" alt="Logo"/>
+        <span>Wine Company</span>
+      </a>
     </div>
-    <nav>
-      <div class="cart">
-        <a data-trigger="popup" data-popup-title="Cart" data-popup-source="cart" href="#"> 🛒 <span>3</span></a>
-      </div>
-      <a href="/services/">Služby</a>
-      <a href="/contact/">Kontakt</a>
+
+    <a class="cart" data-trigger="popup" data-popup-title="Cart" data-popup-source="cart" href="#"> 🛒 <span>3</span></a>
+
+    <button class="menu" id="nav-open">=</button>
+    <nav id="nav">
+      <button class="nav-link" id="nav-close">X</button>
+      <a class="nav-link"  href="/services/">Services</a>
+      <a class="nav-link"  href="/contact/">Contact</a>
     </nav>
   </header>
-  <script src="/assets/js/navbar-scroll.js"></script>
+  <script src="/assets/js/navbar.js"></script>
 
   <section class="hero">
       <video autoplay muted loop>

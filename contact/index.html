@@ -10,19 +10,26 @@
 </head>
 
 <body class="f-normal">
-  <header>
-    <div>
-      <a class="logo f-title-4" href="/"><img src="/assets/img/logo.png" alt="Logo"/>
-      <span>Wine Company</span></a>
+  <header id="homenav">
+    <div class="title">
+      <a href="/" class="logo f-title-4">
+        <img src="/assets/img/logo.png" alt="Logo"/>
+        <span>Wine Company</span>
+      </a>
     </div>
-    <nav>
-      <div class="cart">
-        <a data-trigger="popup" data-popup-title="popup" data-popup-source="cart" href="#"> 🛒 <span>3</span></a>
-      </div>
-      <a href="/services/">Services</a>
-      <a aria-current="page">Contact</a>
+
+    <a class="cart" data-trigger="popup" data-popup-title="Cart" data-popup-source="cart" href="#"> 🛒 <span>3</span></a>
+
+    <button class="menu" id="nav-open">=</button>
+    <nav id="nav">
+      <button class="nav-link" id="nav-close">X</button>
+      <a class="nav-link"  href="/services/">Services</a>
+      <a aria-current="page" class="nav-link">Contact</a>
     </nav>
   </header>
+  <script src="/assets/js/navbar.js"></script>
+
+
   <main class="content">
     <h1 class="f-title-2 text-center">Contact</h1>
     <section>

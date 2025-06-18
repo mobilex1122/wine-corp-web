@@ -73,12 +73,16 @@ header {
     background-color: #880000;
     position: sticky;
     top: 0;
+    gap: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.8rem 2rem;
 }
 
+header .title {
+    flex-grow: 1;
+}
 
 header .logo {
     display: flex;
@@ -113,11 +117,15 @@ MARK: Nav
 nav {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 0.5rem;
 }
 
-nav a {
+
+header .nav-link,
+header .cart {
+    color: white;
     display: block;
+    background-color: transparent;
     font-size: 1.2rem;
     font-weight: normal;
     font-family: "Alumni Sans" ,sans-serif;
@@ -127,8 +135,8 @@ nav a {
     transition: border-color 200ms;
 }
 
-
-nav a:hover {
+header .nav-link:hover,
+header .cart:hover {
     border: currentColor 2px solid;
 }
 
@@ -481,4 +489,108 @@ main.content {
         scale: 1;
         opacity: 1;
     }
+}
+
+
+
+
+
+/*
+MARK: Mobile View
+*/
+header #nav-open,
+header #nav-close {
+    display: none;
+}
+@media screen and (max-width: 720px) {
+    header nav {
+        transform: translateX(100%);
+        pointer-events: none;
+        position: fixed;
+        background-color: #171717;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 2rem;
+        box-sizing: border-box;
+        overflow-x: auto;
+        transition: transform 400ms;
+    }
+
+    header #nav-open {
+        display: block;
+        background-color: transparent;
+        font-size: 1.2rem;
+        font-weight: normal;
+        font-family: "Alumni Sans" ,sans-serif;
+        padding: 0.2rem 1rem;
+        border-radius: 2px;
+        color: white;
+        border: currentColor solid 2px;
+    }
+
+    header #nav-close {
+        width: fit-content;
+        padding: .5rem 1rem;
+        margin-left: auto;
+    }
+
+    header .cart {
+         border: currentColor 2px solid;
+    }
+
+    header nav.open {
+        transform: translateX(0%);
+        pointer-events: all;
+    }
+
+    header .nav-link {
+        background-color: #2d2d2d;
+        width: 100%;
+        padding: 1rem 1.5rem;
+        text-align: right;
+        box-sizing: border-box;
+    }
+
+
+    #popup .popup {
+        background-color: #333;
+        width: 100%;
+        height: 100vh;
+        border-radius: 0px;
+        padding: 1rem;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+
+    .sides {
+        margin-block: 2rem;
+        display: block;
+    }
+
+
+    @keyframes popup-anim {
+        from {
+            transform: translateY(1rem);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0rem);
+            opacity: 1;
+        }
+    }
+
 }
