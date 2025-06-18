@@ -535,6 +535,7 @@ header #nav-close {
         width: fit-content;
         padding: .5rem 1rem;
         margin-left: auto;
+        display: block;
     }
 
     header .cart {
