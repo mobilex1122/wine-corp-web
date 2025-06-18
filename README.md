@@ -1,6 +1,6 @@
 # Wine Corp Web (Concept)
 
-[![Deploy static content to Pages](https://github.com/mobilex1122/wine-corp-web/actions/workflows/static.yml/badge.svg)](https://github.com/mobilex1122/wine-corp-web/actions/workflows/static.yml)
+[![Deploymet Satus](https://github.com/mobilex1122/wine-corp-web/actions/workflows/static.yml/badge.svg)](https://github.com/mobilex1122/wine-corp-web/actions/workflows/static.yml)
 
 
 ## Team
